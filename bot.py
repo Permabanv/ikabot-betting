@@ -47,7 +47,7 @@ async def current_bets(ctx): # Sert à consulter les bets existants
     await ctx.send("Format :")
     await ctx.send("Joueur - [Bois, Marbre, Vin, Cristal, Soufre]")
     for bet in bets:
-        await ctx.send("{} - {}".format(bet[0], bet[1])))
+        await ctx.send("{} - {}".format(bet[0], bet[1]))
 
 @client.command()
 async def clear_bets(ctx): # Efface la liste des paris posés VERIFIER LES AUTORISATIONS DES QUE POSSIBLE
