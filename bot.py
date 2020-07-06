@@ -45,7 +45,7 @@ async def current_bets(ctx): # Sert à consulter les bets existants
         bets = pickle.load(fich_reg, encoding='bytes')
     await ctx.send("== Liste des Paris en cours== \n Format : \n Joueur - [Bois, Marbre, Vin, Cristal, Soufre]")
     for bet in bets:
-        await ctx.send("{} - {}".format(bet[0], bet[1])))
+        await ctx.send("{} - {}".format(bet[0], bet[1]))
 
 @client.command()
 async def clear_bets(ctx): # Efface la liste des paris posés VERIFIER LES AUTORISATIONS DES QUE POSSIBLE
