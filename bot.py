@@ -23,6 +23,17 @@ async def infos(ctx):
     await ctx.send('Utilisez la commande !bet suivi du nom du participant pour ajouter des ressources. Chaque palier de 10000 ressources baisse la côte du joueur visé')
 
 @client.command()
+async def register(ctx, joueur, *activité): # Sert à consulter les inscrits à une activité
+    with open ('participants', 'rb') as fich_reg:
+        register = pickle.load(fich_reg, encoding='bytes')
+    register.append(joueur)
+
+    with open('participants','wb') as fich_reg:
+         pickle.dump(participants, fich_reg)
+
+    await ctx.send('Votre inscription pour {} à bien été prise en compte.')
+
+@client.command()
 async def bet(ctx, joueur, bois=0, marbre=0, vin=0, cri=0, s=0):
     with open('registre', 'rb') as fich_reg:
         bets = pickle.load(fich_reg, encoding='bytes')  
@@ -38,7 +49,7 @@ def int_list(L):
     for x in L:
         L.append(int(x))
     return L
-    
+
 @client.command()
 async def current_bets(ctx): # Sert à consulter les bets existants
     with open('registre', 'rb') as fich_reg:
