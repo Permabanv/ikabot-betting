@@ -61,7 +61,8 @@ async def current_bets(ctx): # Sert à consulter les bets existants
 @client.command()
 async def clear_bets(ctx): # Efface la liste des paris posés VERIFIER LES AUTORISATIONS DES QUE POSSIBLE
     with open('registre', 'wb') as fich_reg:
-        pass
+        empty_list = []
+        pickle.dump(empty_list, fich_reg)
     await ctx.send('Registre des bets vidé.')
     
 
