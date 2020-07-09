@@ -7,7 +7,7 @@ os.chdir('c:/Users/Quentin/Desktop')
 
 TOKEN ='NzI5MDkwOTQyNDYzNzcwNzM0.XwENQw.arITbYjfazPDxzNd_EQ6HFlhQ-E'
 client = commands.Bot(command_prefix = '!') 
-status = cycle(['Développé par Permaban', 'Assisté par Epidemia','Bientôt disponible !'])
+status = cycle(['Développé par Permaban', 'Assisté par Epidemia', 'Bientôt disponible !'])
 
 @client.event
 async def on_ready():
