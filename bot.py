@@ -7,7 +7,7 @@ os.chdir('c:/Users/Quentin/Desktop')
 
 TOKEN ='NzI5MDkwOTQyNDYzNzcwNzM0.XwENQw.arITbYjfazPDxzNd_EQ6HFlhQ-E'
 client = commands.Bot(command_prefix = '!') 
-status = cycle(['Développé par Permaban','Bientôt disponible !'])
+status = cycle(['Développé par Permaban', 'Assisté par Epidemia','Bientôt disponible !'])
 
 @client.event
 async def on_ready():
@@ -29,7 +29,7 @@ async def register(ctx, joueur, *activité): # Sert à consulter les inscrits à
     register.append(joueur)
 
     with open('participants','wb') as fich_reg:
-         pickle.dump(participants, fich_reg)
+         pickle.dump(register, fich_reg)
 
     await ctx.send('Votre inscription pour {} à bien été prise en compte.')
 
