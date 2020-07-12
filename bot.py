@@ -5,9 +5,9 @@ import os
 
 os.chdir('c:/Users/Quentin/Desktop')
 
-TOKEN ='NzI5MDkwOTQyNDYzNzcwNzM0.XwENQw.arITbYjfazPDxzNd_EQ6HFlhQ-E'
+TOKEN ='NzI5MDkwOTQyNDYzNzcwNzM0.XwtEkQ.rnbUrP3g7o9955l2z8Fstz2eQxU'
 client = commands.Bot(command_prefix = '!') 
-status = cycle(['Développé par Permaban', 'Assisté par Epidemia', 'Bientôt disponible !'])
+status = cycle(['Développé par Permaban', 'Développé par Epidemia', 'Bientôt disponible !'])
 
 @client.event
 async def on_ready():
@@ -61,9 +61,14 @@ async def current_bets(ctx): # Sert à consulter les bets existants
 @client.command()
 async def clear_bets(ctx): # Efface la liste des paris posés VERIFIER LES AUTORISATIONS DES QUE POSSIBLE
     with open('registre', 'wb') as fich_reg:
-        empty_list = []
-        pickle.dump(empty_list, fich_reg)
+        pass
     await ctx.send('Registre des bets vidé.')
+
+@client.command()
+@commands.check(clear_bets) 
+
+async def permissions(ctx):
+    return ctx.author.id == 203943738421018624, 275260209771970560
     
 
 client.run(TOKEN)
