@@ -3,9 +3,9 @@ from discord.ext import commands, tasks
 from itertools import cycle
 import os
 
-os.chdir('c:/Users/Quentin/Desktop')
+os.chdir('c:/Users/Quentin/Desktop') #insertdirectory
 
-TOKEN ='NzI5MDkwOTQyNDYzNzcwNzM0.XwtEkQ.rnbUrP3g7o9955l2z8Fstz2eQx' (insert selftoken)
+TOKEN ='NzI5MDkwOTQyNDYzNzcwNzM0.XwtEkQ.rnbUrP3g7o9955l2z8Fstz2eQx' #insertselftoken
 client = commands.Bot(command_prefix = '!') 
 status = cycle(['Développé par Permaban', 'Développé par Epidemia', 'Bientôt disponible !'])
 
@@ -68,7 +68,7 @@ async def clear_bets(ctx): # Efface la liste des paris posés VERIFIER LES AUTOR
 @commands.check(clear_bets) 
 
 async def permissions(ctx):
-    return ctx.author.id == 203943738421018624, 275260209771970560
+    return ctx.author.id == 203943738421018624, 275260209771970560 #enable discord dev mode and pick your id
     
 
 client.run(TOKEN)
