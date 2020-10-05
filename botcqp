@@ -5,7 +5,7 @@ import os
 
 os.chdir('c:/Users/Quentin/Desktop')
 
-TOKEN ='NzI5MDkwOTQyNDYzNzcwNzM0.XwtEkQ.rnbUrP3g7o9955l2z8Fstz2eQxU'
+TOKEN ='NzI5MDkwOTQyNDYzNzcwNzM0.XwtEkQ.rnbUrP3g7o9955l2z8Fstz2eQx' (insert selftoken)
 client = commands.Bot(command_prefix = '!') 
 status = cycle(['Développé par Permaban', 'Développé par Epidemia', 'Bientôt disponible !'])
 
